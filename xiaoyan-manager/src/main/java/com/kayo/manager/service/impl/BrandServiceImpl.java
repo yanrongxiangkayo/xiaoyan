@@ -6,6 +6,7 @@ import com.kayo.io.Brand;
 import com.kayo.io.PageResult;
 import com.kayo.manager.BrandService;
 import com.kayo.manager.mapper.BrandMapper;
+import com.kayo.manager.utils.RpcLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class BrandServiceImpl implements BrandService {
     private BrandMapper brandMapper;
 
     @Override
+    @RpcLog(id = "brand.id", name = "brand.name")
     public boolean save(Brand brand) {
         int i = brandMapper.save(brand);
         return i > 0;

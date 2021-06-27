@@ -1,11 +1,14 @@
 package com.kayo.io;
 
+import com.kayo.CommData;
+
 /**
  * 品牌
+ *
  * @author yanrx
  * @since 2020-05-31
  */
-public class Brand {
+public class Brand extends CommData {
     //品牌id
     private long id;
     //品牌名称
